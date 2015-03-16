@@ -1,0 +1,145 @@
+body {
+  background: #fff;
+}
+
+#admin_actions {
+  position: absolute;
+  top: 8px; right: 35px;
+}
+
+#statistics {
+  margin: 35px 0 35px 35px;
+}
+  #statistics .download_csv {
+    margin-left: 12px;
+  }
+  #statistics .float_right.text_link {
+    padding-left: 8px;
+  }
+  #statistics table {
+    width: 100%;
+  }
+    #statistics td {
+      color: #222;
+      padding: 0 35px 0 0;
+    }
+      #statistics .data td {
+      }
+        #statistics .number {
+          font-size: 50px;
+          border-bottom: 1px solid #131b1d;
+        }
+        #statistics .chart_col {
+          position: relative;
+          padding-bottom: 10px;
+          height: 180px;
+        }
+        #statistics .chart {
+          position: absolute;
+          left: 0; right: 0;
+          height: 180px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #131b1d;
+        }
+      #statistics .labels td, #statistics .data thead tr td {
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 5px 35px 5px 0;
+      }
+        #statistics .labels td {
+          padding: 5px 35px 50px 0;
+        }
+          #statistics .labels.top_documents_label_year {
+            display: none;
+          }
+        #statistics td .sort {
+          cursor: pointer;
+        }
+          #statistics td .sort.active {
+            font-weight: bold;
+          }
+          #statistics td .sort:hover {
+            text-decoration: underline;
+          }
+
+#statistics .data table {
+  border-bottom: 1px solid #131b1d;
+}
+  #statistics .data table thead td {
+    border-bottom: 1px solid #131b1d;
+  }
+  #statistics .data table tr {
+    background: transparent;
+  }
+    #statistics .data tr td {
+      color: #222;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+      #statistics .data tbody tr td {
+        padding: 5px 35px 5px 0;
+        height: 25px;
+        border-bottom: 1px solid #bbb;
+      }
+      #statistics #instances tbody tr td {
+        line-height: 25px;
+      }
+      #statistics #numbers tbody tr td {
+        line-height: 50px;
+        font-size: 25px;
+        padding-right: 75px;
+      }
+        #statistics #numbers td.first {
+          font-size: 12px;
+        }
+      #statistics .data table tr td.first {
+        padding-right: 0;
+        vertical-align: top;
+      }
+      #statistics .data table tr td.last {
+        width: 100%;
+      }
+      #statistics .data table img.avatar {
+        margin: 1px 15px 1px 4px;
+        border: 0;
+      }
+      #statistics .data table a {
+        text-decoration: underline;
+      }
+      #statistics .data table .document_count .private {
+        color: #844;
+      }
+      #statistics .documents tbody tr td {
+        line-height: 45px;
+      }
+        #statistics .documents td.first {
+          width: 30px;
+          padding: 7px 0 7px 0;
+        }
+        #statistics .documents .doc {
+          width: 30px; height: 37.5px;
+        }
+        #statistics .login_as .minibutton {
+          display: none;
+        }
+        #statistics .display_view:hover .login_as .minibutton {
+          display: block;
+        }
+      #statistics .notes tbody tr td {
+        line-height: 20px;
+        vertical-align: middle;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      #statistics .data .searches tbody td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: auto;
+        line-height: 20px;
+        vertical-align: middle;
+      }
+
+.icon.minus {
+  position: absolute; margin-top: 5px;
+  cursor: pointer;
+}

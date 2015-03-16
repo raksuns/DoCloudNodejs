@@ -1,0 +1,446 @@
+/*--------------------- Account Views (Rows & Badges) ------------------------*/
+
+.account_view.badge {
+  position: relative;
+  margin: 20px 0 20px 30px;
+  font: 11px/16px Arial;
+  color: #333;
+}
+  .account_view.badge img.avatar {
+    border: 1px solid #ccc;
+    float: left;
+    margin-right: 10px;
+  }
+  .account_view.badge .name {
+    font-weight: bold;
+  }
+  
+/*--------------------------- Account Manager --------------------------------*/
+
+#organization_list { display:none; }
+body.accounts_panel_tab #organization_list { 
+  display:block;
+  border-top: 1px solid #e0e0e0;
+}
+
+#accounts_manager_container {
+  margin: 0px 25px;
+}
+
+#accounts_manager_container h3 {
+  font-weight: bold;
+  margin-bottom: 1em;
+  font: bold 14px Arial;
+}
+
+#accounts_manager_container .user.account_view { display:none; }
+#accounts_manager_container.user_mode .user.account_view { display:block; }
+
+#accounts_manager_container .organizations { display:none; }
+#accounts_manager_container.organization_mode .organizations { display:block; }
+
+.user.account_view .edit {
+  display:none;
+}
+
+.user.account_view {
+  clear: both;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.user.account_view .avatar {
+  margin: 15px 0;
+  border-radius: 3px;
+  border: 1px solid #d0d0d0;
+  width: 150px;
+  float: left;
+}
+
+.user.account_view form {
+  padding: 15px;
+  float: left;
+}
+
+.user.account_view label {
+  display:block;
+  padding-bottom: 10px;
+}
+
+.user.account_view label .title {
+  display: inline-block;
+  min-width: 12em;
+}
+
+.user.account_view input, .user.account_view textarea, .user.account_view select {
+  border-radius: 3px;
+  border: 1px solid #d0d0d0;
+  min-width: 20em;
+}
+
+.user.account_view .controls .minibutton {
+  width: 14em;
+  display: inline-block;
+}
+
+.organizations {
+  width: 100%;
+}
+
+.organizations .organization { display:none; }
+.organizations .organization.display_view { display: block; }
+
+.organizations .organization form.details label {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.organizations .organization form.details label .title {
+  display: inline-block;
+  min-width: 20em;
+}
+
+.organization .account_list td {
+  color: black;
+  font-size: 12px;
+}
+
+.organization .controls {
+  height: 24px;
+  margin-bottom: 10px;
+}
+  .organization .controls div {
+    margin-right: 10px;
+  }
+
+#accounts_manager_container .toggle {
+  width: 48px; height: 24px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: url(/images/embed/ui/account_toggle_left.png);
+  float: right;
+}
+  #accounts_manager_container.organizations .toggle {
+    background: url(/images/embed/ui/account_toggle_right.png);
+  }
+  
+/*--------------------------- Accounts Dialog --------------------------------*/
+.account_list {
+  max-width: none;
+}
+  .account_list .custom {
+    position: relative;
+    max-height: 323px;
+    overflow-y: auto; overflow-x: hidden;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  .account_list .minibutton.cancel {
+    display: none;
+  }
+  .account_list .organization_language {
+    margin-left: 2em;
+  }
+  .account_list tr.editing > td {
+    padding: 0 0 8px 40px;
+    border-bottom: 2px solid #444444;
+  }
+
+  .account_list .language {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+      .account_list_content .editing td {
+        padding: 0px;
+        border-bottom: 0;
+      }
+      .account_list_content .language {
+        font-size: 12px;
+        padding-bottom: 5px;
+      }
+
+  .collaborator_list {
+    width: 100%;
+    border-top: 1px solid #222;
+  }
+    .account_list_content .languages table {
+      border-top: 0;
+    }
+    .account_list td,
+    .collaborator_list td {
+      padding: 10px;
+      vertical-align: middle;
+      white-space: nowrap;
+      font-size: 11px; 
+      line-height: 25px;
+    }
+    .collaborator_list td {
+      color: #ccc;
+      border-bottom: 1px solid #222;
+    }
+      .collaborator_list .account_view.disabled_role td,
+      .collaborator_list .account_view.disabled .role .display {
+        color: #B66161;
+      }
+      .account_list .first,
+      .collaborator_list .first {
+        width: 0%; padding: 0;
+      }
+      .account_list .last,
+      .collaborator_list .last {
+        padding-right: 0;
+      }
+      .account_list .name  { width: 0%; }
+      .account_list .email { width: 0%; }
+      .account_list .last  { width: 100%; }
+
+.account_list tr .edit, .account_list tr .display, .account_list div .edit, .account_list div .display {
+  display: none;
+}
+.account_list tr.edit_view_mode .edit, .account_list tr.display_view_mode .display, 
+.account_list div.edit_view_mode .edit, .account_list div.display_view_mode .display {
+  display: block;
+}
+.account_list .disabled_role.display_view_mode td {
+  color: #B66161;
+}
+.account_list img.avatar,
+.collaborator_list img.avatar {
+  position: relative;
+  top: 4px;
+  border: 1px solid #333;
+}
+.account_list .text_input {
+  width: 150px;
+}
+.account_list .name_wrapper {
+  width: 240px;
+}
+  .account_list .name .display {
+  }
+  .account_list .name_wrapper .text_input {
+    float: left;
+    width: 100px;
+  }
+    .account_list .name_wrapper .text_input:first-child {
+      margin-right: 20px;
+    }
+.account_list .role .edit {
+  font: 11px/18px Arial;
+  color: #777;
+}
+.account_list .controls_wrapper {
+  min-width: 100px;
+}
+.account_list .change_password,
+.account_list .edit_account {
+  float: left;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+}
+.account_list .save_changes {
+  float: left;
+  position: relative;
+  left: -6px;
+  margin: 0 5px;
+}
+.account_list .disable_account,
+.account_list .enable_account {
+  float: left;
+}
+.account_list .pending_wrap {
+  position: relative;
+}
+  .account_list .pending_badge {
+    display: none;
+    position: absolute;
+    margin: 19px 0 0 17px;
+    z-index: 5;
+  }
+    .account_list .row.pending .pending_badge,
+    .account_list .admin.pending .pending_badge {
+      display: block;
+    }
+.account_list tr.row .pending_notification,
+.account_list tr.admin .pending_notification {
+  font: 10px Arial;
+  text-transform: uppercase;
+  padding-left: 7px;
+  color: #808080;
+  display: none;
+}
+  .account_list .row.pending .pending_notification,
+  .account_list tr.admin.pending .pending_notification {
+    display: inline;
+  }
+
+#disable_account_confirm {
+  width: 342px;
+}
+
+/*--------------------------- Share Documents Dialog ----------------------------*/
+.share_dialog {
+  width: 600px;
+}
+  .share_dialog .account_list {
+    width: 100%;
+  }
+  .share_dialog .custom {
+    max-height: none;
+    margin-bottom: 0;
+  }
+  .share_dialog .controls {
+    display: none;
+  }
+  .share_dialog .document_reviewers {
+    margin: 0;
+    text-align: left;
+    max-height: 280px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .share_dialog .reviewers {
+    position: relative;
+  }
+  .share_dialog td {
+    white-space: normal;
+    vertical-align: middle;
+  }
+  .share_dialog .text_input {
+    width: auto;
+  }
+  .share_dialog .email .text_input.dark.small {
+    margin: 0;
+  }
+  .share_dialog .text_input.dark.small input {
+    height: 15px;
+  }
+  .share_dialog .edit_column {
+    width: 16px;
+    padding-right: 5px;
+  }
+    .share_dialog .edit_account {
+      float: none;
+      position: relative;
+      margin: -3px 0 0 0;
+      display: inline-block;
+    }
+    .share_dialog .cancel_changes {
+      margin: 2px;
+    }
+    .share_dialog .save_changes,
+    .share_dialog .remove_reviewer {
+      float: left;
+    }
+  .share_dialog .email {
+    width: 130px;
+  }
+    .share_dialog .email .minibutton {
+      float: right;
+    }
+    .share_dialog .email input[name=email] {
+      width: 130px;
+    }
+  .share_dialog .nowrap {
+    white-space: nowrap;
+  }
+  .share_dialog .name {}
+    .share_dialog .name input,
+    .share_dialog .name_wrapper .text_input {
+      width: 66px;
+    }
+    .share_dialog .name_wrapper {
+      width: 164px;
+    }
+    .share_dialog .name .edit_account {
+      margin: 4px 4px 0 8px;
+    }
+  .share_dialog .document_count {
+    font-size: 10px;
+    color: ##cdcdcd;
+    font-style: italic;
+  }
+  .share_dialog .account_view {
+    padding: 10px 0;
+    height: 27px;
+    font: 11px/27px Helvetica, Arial;
+    border-bottom: 1px solid #222;
+  }
+  .share_dialog .reviewer_management {
+    text-align: left;
+    margin-top: 10px;
+    display: none;
+  }
+  .share_dialog .reviewers_common .reviewers_title {
+    margin-left: 0;
+  }
+  .share_dialog .enter_full_name_label,
+  .share_dialog .reviewer_management input[name=first_name],
+  .share_dialog .reviewer_management input[name=last_name] {
+    display: none;
+  }
+  .share_dialog .reviewer_management .last {
+    line-height: 12px;
+    font-size: 10px;
+    white-space: normal;
+    padding: 10px;
+    color: #FF0000;
+  }
+  .share_dialog .reviewer_management .last.error_white {
+    color: #FFF;
+  }
+  .share_dialog .document_reviewers_empty {
+    overflow: hidden;
+    text-align: left;
+    color: #ccc;
+    font-size: 12px;
+    margin: 0 0 12px 0;
+  }
+  .share_dialog .add_reviewer {
+    float: left;
+  }
+    .share_dialog .add_reviewer.on_editing {
+      display: none;
+    }
+
+  /* Step Two: Email Reviewers */
+
+  .share_dialog .step_two {
+    text-align: left;
+  }
+    .share_dialog textarea.email_message {
+      width: 584px;
+      margin: 15px 0;
+    }
+
+  /* Controls */
+
+  .share_dialog .step_controls {
+    clear: both;
+    margin: 24px 0 0 0;
+  }
+    .share_dialog .step_controls .cancel {
+      float: left;
+    }
+    .share_dialog .step_controls .next,
+    .share_dialog .step_controls .close,
+    .share_dialog .step_controls .previous {
+      float: right;
+      margin-left: 8px;
+    }
+    .share_dialog.p1_step .step_controls .previous,
+    .share_dialog.p2_step .step_controls .close,
+    .share_dialog.p2_step .step_controls .add_reviewer {
+      display: none;
+    }
+  .share_dialog.p2_step .step_one,
+  .share_dialog.p1_step .step_two {
+    display: none;
+  }
+  .share_dialog .icon.spinner_dark {
+    top: 30px;
+    bottom: none;
+  }

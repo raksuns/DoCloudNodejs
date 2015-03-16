@@ -1,0 +1,58 @@
+.docalog .custom {
+  width: 500px;
+}
+  .docalog .row {
+    height: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: left;
+  }
+    .docalog .row.tall {
+      height: 90px;
+    }
+    .docalog .row.last {
+      margin-bottom: 0;
+    }
+  .docalog input.changed, .docalog textarea.changed {
+    border-color: #2a955c !important;
+  }
+  .docalog label {
+    background-color: #000;
+    display: block;
+    max-width: 120px;
+    font-size: 11px;
+    color: #ccc;
+    text-align: left;
+    position: absolute;
+    left: 0;
+  }
+  .docalog .text_input {
+    position: absolute;
+    right: 0;
+    width: 370px;
+  }
+  .docalog textarea.content {
+    float: right;
+    width: 366px; height: 78px;
+    display: block;
+  }
+  .docalog select {
+    position: absolute;
+    left: 115px; top: 5px;
+  }
+
+#pubdate_dialog {
+  width: 500px;
+}
+  #pubdate_dialog .custom {
+    font-size: 11px;
+  }
+    #pubdate_dialog .description {
+      margin-bottom: 30px;
+    }
+    #pubdate_dialog .datetime {
+      margin-right: 8px;
+    }
+      #pubdate_dialog select {
+        margin-left: 5px;
+      }

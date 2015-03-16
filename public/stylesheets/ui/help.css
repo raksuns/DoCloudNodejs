@@ -1,0 +1,186 @@
+.help_text {
+  font: 11px/16px Helvetica, Arial;
+  color: #333;
+}
+
+#contact_us .text {
+  font-size: 10px;
+  margin-bottom: 30px;
+  color: #CCC;
+}
+  #contact_us a {
+    color: #FFF;
+    text-decoration: underline;
+  }
+  #contact_us .contact_email {
+    margin-bottom: 15px;
+  }
+
+#help {
+  color: #333;
+  padding: 15px 30px 30px;
+  max-width: 575px;
+  font: 14px/20px Helvetica, Arial;
+  display: none;
+  position: relative;
+}
+  #help .static_only {
+    display: none;
+  }
+  body.help_panel_tab #help {
+    display: block;
+  }
+  #help code, #help tt, #help pre {
+    font: 11px Menlo, Consolas, Monaco, Courier, monospace;
+    line-height: 16px;
+    padding: 1px 3px;
+    color: #444;
+    background: #f8f8ff;
+    border: 1px solid #dedede;
+  }
+    #help code, #help tt {
+      white-space: nowrap;
+    }
+    #help pre {
+      padding: 8px;
+      overflow-x: auto;
+    }
+      #help pre > code {
+        background: none;
+        border: 0;
+        padding: 0;
+        white-space: pre;
+      }
+  #help img {
+    float: right;
+    margin-left: 15px;
+  }
+  #help img.full_line {
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
+  #help em {
+    font-style: italic;
+  }
+  #help a {
+    text-decoration: underline;
+    color: #000;
+  }
+  #help h1, #help h2, #help h3 {
+    margin: 30px 0 15px 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+  }
+    #help h2 {
+      font-size: 16px;
+    }
+    #help h3 {
+      font-size: 14px;
+      margin: 20px 0 10px 0;
+    }
+  #help p {
+    margin: 20px 0;
+  }
+  #help ul {
+    list-style-type: disc;
+    padding-left: 25px;
+  }
+    #help li {
+      margin-bottom: 5px;
+    }
+  #help_toolbar {
+    height: 26px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 5;
+  }
+    #help_toolbar .minibutton {
+      float: left;
+      margin: 0 8px 8px 0;
+    }
+    #help_toolbar .menu {
+      width: 135px;
+    }
+    #help_toolbar .contact_us {
+      width: 165px;
+    }
+    #help_toolbar .uservoice {
+      width: 190px;
+    }
+  #help_content {
+    clear: both;
+    position: relative;
+  }
+  #help .help_footer {
+    position: absolute;
+    left: 0; right: 0; bottom: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: #808080;
+  }
+    #help .help_footer a {
+      color: #808080;
+    }
+
+#help table {
+  margin: 20px 0 20px 0;
+  border-top: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+}
+  #help th {
+    text-transform: uppercase;
+    font: 10px Helvetica, Arial;
+    color: #222;
+  }
+  #help th, #help td {
+    padding: 7px 20px 7px 10px;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    vertical-align: middle;
+  }
+    #help td {
+      padding: 10px 20px 10px 10px;
+      font-size: 12px;
+      line-height: 16px;
+      background: #f0fafa;
+    }
+      #help td:first-child {
+        min-width: 75px;
+        font-weight: bold;
+      }
+    #help tr:nth-child(2n) > td {
+      background: #f4f4f4;
+    }
+    #help .param {
+      font-weight: bold;
+    }
+    #help .desc {
+      font-size: 11px;
+      line-height: 15px;
+      color: #445056;
+    }
+  #help table col.parameter {
+    font-weight: bold;
+  }
+
+#help #search_form {
+  margin-bottom: 20px;
+}
+  #help #search_form .text_input {
+    position: absolute;
+    display: block;
+    margin: 0 0 0 130px;
+    width: 340px;
+  }
+  #help #search_form .minibutton {
+    position: absolute;
+    right: 5px;
+    margin-top: 3px;
+  }
+  #help #search_form label {
+    color: #445056;
+    font-size: 12px;
+    line-height: 14px;
+  }

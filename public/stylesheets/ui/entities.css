@@ -1,0 +1,76 @@
+/* Spark Entities inside of Document Tiles ---------------------------------------*/
+
+.document .entities {
+  overflow: hidden;
+  position: relative;
+  margin: 20px -50px 0 -20px;
+  padding-left: 20px;
+}
+  .document .entities .cancel_search {
+    float: left;
+    cursor: pointer;
+    margin: 1px 7px 0 0;
+  }
+  .document .entity_group {
+    margin: 0 50px 25px 0;
+    float: left;
+  }
+    .document .entity_group_header {
+      margin-bottom: 8px;
+    }
+      .document .entity_group_title {
+        margin-right: 10px;
+        font-weight: bold;
+      }
+    .document .entity_line {
+      line-height: 19px;
+      padding: 5px 0;
+    }
+      .document .entity_line_title {
+        width: 112px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #333;
+        position: absolute;
+      }
+      .document .entity_buckets {
+        position: relative;
+        margin-left: 120px;
+        height: 19px;
+        overflow: hidden;
+      }
+        .document .entity_rule {
+          position: absolute;
+          background: #eee;
+          width: 100%;
+          top: 9px; left: 0;
+          height: 1px;
+        }
+        .document .entity_bucket_wrap {
+          position: relative;
+          display: block;
+          float: left;
+          width: 3px; height: 19px; 
+          padding-right: 1px;
+          cursor: pointer;
+        }
+          .document .entity_bucket {
+            position: absolute;
+            top: 50%;
+            width: 3px;
+            background: #ccc;
+            background: rgba(0,0,0,0.3);
+          }
+            .document .entity_bucket_wrap.active .entity_bucket {
+              background: #999;
+              background: rgba(0,0,0,0.5);
+            }
+
+.document .entity_list {
+  line-height: 18px;
+}
+.document .entities .arrow.left {
+  top: 1px;
+  margin-left: 2px;
+}

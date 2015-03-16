@@ -1,0 +1,77 @@
+.arrow {
+  font-size: 17px;
+  line-height: 11px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  top: 2px;
+}
+  .arrow:hover {
+    color: #000;
+  }
+  .arrow.left {
+    padding-right: 4px;
+  }
+  .arrow.right {
+    padding-left: 4px;
+  }
+
+#paginator {
+  display: none;
+  position: absolute;
+  bottom: 20px; left: 30px; right: 30px;
+  padding: 15px 0 0;
+  font-size: 11px;
+  line-height: 18px;
+  height: 18px;
+  color: #808080;
+  text-align: right;
+  border-top: 1px solid #ccc;
+}
+  body.paginated #paginator {
+    display: block;
+  }
+  #paginator .legal {
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
+    text-align: center;
+  }
+  #paginator .description,
+  #paginator .sorter {
+    float: left;
+  }
+    #paginator .sorter {
+      margin-left: 5px;
+    }
+    #paginator .range {
+      font-weight: bold;
+    }
+  #paginator .enumeration {
+    height: 20px;
+  }
+    #paginator.is_editing .enumeration {
+      margin-top: -3px;
+    }
+    #paginator .current_placeholder {
+      font-weight: bold;
+    }
+      #paginator.is_editing .current_placeholder {
+        display: none;
+      }
+    #paginator .current_page {
+      display: none;
+      position: relative;
+      width: 25px;
+      font-size: 11px;
+      height: 17px;
+      text-align: center;
+      color: #808080;
+    }
+      #paginator.is_editing .current_page {
+        display: inline;
+      }
+      #paginator .current_page:focus {
+        color: #000;
+      }

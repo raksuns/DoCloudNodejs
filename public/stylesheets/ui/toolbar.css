@@ -1,0 +1,75 @@
+#search_toolbar_container {
+  overflow: hidden;
+  height: 32px;
+  margin: 0 10px 0 30px;
+  z-index: 50;
+}
+
+#toolbar {
+  height: 46px;
+}
+  #floating_toolbar {
+    padding-right: 20px;
+  }
+    body.floating_toolbar #floating_toolbar {
+      position: fixed;
+      overflow: hidden;
+      top: 0px; left: 330px; right: 20px;
+      padding: 30px 30px 0 30px;
+      min-width: 527px;
+      height: 53px;
+      z-index: 10;
+    }
+      body.floating_toolbar #floating_line {
+        position: absolute;
+        top: 0; left: 20px; right: 20px; bottom: 0;
+        background: white;
+        border-bottom: 1px solid #ccc;
+        opacity: 0.95;
+      }
+  #toolbar .minibutton {
+    float: left;
+    position: relative;
+    margin: 0 0 30px 8px;
+    z-index: 1;
+  }
+    #toolbar #open_viewers {
+      margin-left: 0;
+    }
+  #toolbar #size_toggle {
+    float: right;
+    width: 48px; height: 24px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: url(/images/embed/ui/size_toggle_full.png);
+  }
+    body.minidocs #toolbar #size_toggle {
+      background: url(/images/embed/ui/size_toggle_thumb.png);
+    }
+
+.embed_code {
+  width: 550px;
+}
+  .embed_code .cancel {
+    display: none;
+  }
+  .embed_code .explanation {
+    color: #ccc;
+    font-size: 11px; line-height: 18px;
+    text-align: left;
+  }
+    .embed_code .explanation > a {
+      color: white;
+    }
+      .embed_code .explanation > a:hover {
+        text-decoration: underline;
+      }
+  .embed_code .snippet {
+    margin: 10px 0;
+    border: 1px solid #dedede;
+    padding: 8px;
+    width: 532px; height: 105px;
+    resize: none;
+    font: 11px Menlo, Consolas, Monaco, Courier, monospace;
+  }
