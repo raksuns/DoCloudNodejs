@@ -2,20 +2,22 @@
 // a message, and hide() it when the corresponding action has finished.
 dc.ui.spinner = {
 
-  show : function(message) {
-    this.ensureElement();
-    message = message || "Loading";
-    this.el.stop(true, true).fadeIn('fast');
-  },
+	show: function (message) {
+		this.ensureElement();
+		message = message || "Loading";
+		this.el.stop(true, true).fadeIn('fast');
+	},
 
-  hide : function() {
-    this.ensureElement();
-    this.el.stop(true, true).fadeOut('fast', function(){ $(this).css({display : 'none'}); });
-  },
+	hide: function () {
+		this.ensureElement();
+		this.el.stop(true, true).fadeOut('fast', function () {
+			$(this).css({display: 'none'});
+		});
+	},
 
-  ensureElement : function() {
-    this.el || (this.el = $('#spinner'));
-  }
+	ensureElement: function () {
+		this.el || (this.el = $('#spinner'));
+	}
 
 };
 
