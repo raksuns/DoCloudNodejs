@@ -379,6 +379,7 @@ dc.ui.ShareDialog = dc.ui.Dialog.extend({
 		var account = _.detect(this.reviewers(), function (acc) {
 			return acc.id == accountId;
 		});
+
 		var reviewerDocs = this.docsForReviewers([account.id]);
 		var documentIds = _.pluck(reviewerDocs, 'id');
 
@@ -421,6 +422,7 @@ dc.ui.ShareDialog = dc.ui.Dialog.extend({
 
 	_onRemoveError: function (resp) {
 		this.hideSpinner();
+
 		if (resp.status == 403) {
 			this.error(_.t('reviewer_remove_permission_denied'));
 		}
@@ -472,7 +474,11 @@ dc.ui.ShareDialog = dc.ui.Dialog.extend({
 		$.ajax({
 			url: '/reviewers/send_email',
 			type: 'POST',
-			data: {account_ids: accountIds, document_ids: documentIds, message: message},
+			data: {
+				account_ids: accountIds,
+				document_ids: documentIds,
+				message: message
+			},
 			success: _.bind(function (resp) {
 				var account = (accounts.length == 1 ? accounts[0].get('email') : accounts.length + ' people' );
 
@@ -551,8 +557,9 @@ dc.ui.ShareDialog = dc.ui.Dialog.extend({
 	},
 
 	_previousStep: function () {
-		if (this.currentStep > 1) this.currentStep -= 1;
+		if (this.currentStep > 1) {
+			this.currentStep -= 1;
+		}
 		this._setStep();
 	}
-
 });
